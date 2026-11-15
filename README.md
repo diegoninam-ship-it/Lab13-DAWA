@@ -163,7 +163,7 @@ Visita `http://localhost:3005`.
 
 **Repositorio:** https://github.com/diegoninam-ship-it/Lab13-DAWA.git
 
-**Aplicación en Vercel:** _pendiente_
+**Aplicación en Vercel:** https://lab13-dawa-klri6bqi7-diego-nina-malqui-s-projects.vercel.app
 
 Al desplegar, recuerda:
 1. Configurar las mismas variables de entorno (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `NEXTAUTH_SECRET`) en el panel de Vercel.
