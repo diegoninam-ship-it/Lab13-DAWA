@@ -174,7 +174,11 @@ Al desplegar, recuerda:
 
 ## 📝 Conclusiones
 
-_Pendiente._
+1. NextAuth.js permite manejar distintos métodos de autenticación bajo un mismo sistema de sesiones. Google, GitHub y las credenciales propias terminan utilizando JWT, por lo que el resto de la aplicación puede gestionar las sesiones sin depender del proveedor con el que inició sesión el usuario.
+2. La compatibilidad entre versiones puede cambiar por completo el funcionamiento de una aplicación. El problema del middleware no estaba en la escritura del código, sino en los cambios de Next.js 16 frente a la estructura que todavía utilizaba next-auth v4. Resolverlo implicó entender esa diferencia y adaptar la implementación.
+3. Proteger contraseñas no consiste únicamente en utilizar bcrypt. También hay que considerar la normalización del correo, el control de intentos fallidos y los mensajes de autenticación. Son pequeños detalles que, en conjunto, reducen posibles vulnerabilidades y evitan exponer información innecesaria.
+4. Diagnosticar antes de corregir evita perder tiempo aplicando soluciones equivocadas. Los problemas del puerto, la ubicación de los componentes y los nombres de archivos parecían similares, pero tenían causas distintas. Verificar cada caso antes de modificar el código permitió resolverlos sin añadir correcciones innecesarias.
+5. Trabajar con varios proveedores OAuth exige mantener una configuración independiente por entorno. Google y GitHub necesitan sus propias URL de callback tanto en local como en producción. Un error al actualizar estas direcciones en Vercel puede dejar funcionando la aplicación, pero impedir el inicio de sesión con un proveedor específico.
 
 ---
 
